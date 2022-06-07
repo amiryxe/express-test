@@ -1,3 +1,6 @@
+console.clear();
+
+
 import express from "express";
 
 const app = express();
@@ -14,12 +17,11 @@ app.use((req, res, next) => {
 app.route('/test')
     .get((req, res) => {
         res.send('<h1>this is get req to main page</h1>');
-        console.log(req.body)
+        console.log(req.query)
     })
     .post((req, res) => {
-
         console.log(req.body)
-        res.status(400)
+        res.status(203)
 
         res.send({
             id: 'test'
